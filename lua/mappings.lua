@@ -10,28 +10,28 @@ M.general = {
       "Toggle breakpoint",
     },
     ["<leader>dus"] = {
-      function ()
-        local widgets = require('dap.ui.widgets');
-        local sidebar = widgets.sidebar(widgets.scopes);
-        sidebar.open();
+      function()
+        local widgets = require "dap.ui.widgets"
+        local sidebar = widgets.sidebar(widgets.scopes)
+        sidebar.open()
       end,
       "Open debugging sidebar",
     },
   },
   v = {
-    [">"] = { ">gv", "indent"},
+    [">"] = { ">gv", "indent" },
   },
 }
 
 M.crates = {
   n = {
-    ['<leader>rcu'] = {
-      function ()
-        require('crates').upgrade_all_crates()
+    ["<leader>rcu"] = {
+      function()
+        require("crates").upgrade_all_crates()
       end,
-      'Update all crates',
-    }
-  }
+      "Update all crates",
+    },
+  },
 }
 
 -- more keybinds!
