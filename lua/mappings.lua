@@ -17,6 +17,12 @@ M.general = {
       end,
       "Open debugging sidebar",
     },
+    ["<leader>lf"] = {
+      function()
+        vim.diagnostic.open_float { border = "rounded" }
+      end,
+      "Floating diagnostic",
+    },
   },
   v = {
     [">"] = { ">gv", "indent" },
