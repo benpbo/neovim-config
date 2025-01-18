@@ -1,45 +1,21 @@
 require "nvchad.mappings"
----@type MappingsTable
-local M = {}
 
-M.general = {
-  n = {
-    [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    ["<leader>db"] = {
-      "<cmd> DapToggleBreakpoint <CR>",
-      "Toggle breakpoint",
-    },
-    ["<leader>dus"] = {
-      function()
-        local widgets = require "dap.ui.widgets"
-        local sidebar = widgets.sidebar(widgets.scopes)
-        sidebar.open()
-      end,
-      "Open debugging sidebar",
-    },
-    ["<leader>lf"] = {
-      function()
-        vim.diagnostic.open_float { border = "rounded" }
-      end,
-      "Floating diagnostic",
-    },
-  },
-  v = {
-    [">"] = { ">gv", "indent" },
-  },
-}
+local map = vim.keymap.set
 
-M.crates = {
-  n = {
-    ["<leader>rcu"] = {
-      function()
-        require("crates").upgrade_all_crates()
-      end,
-      "Update all crates",
-    },
-  },
-}
+map("n", ";", ":", { desc = "CMD enter command mode" })
+map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Toggle breakpoint" })
+map("n", "<leader>dus", function()
+  local widgets = require "dap.ui.widgets"
+  local sidebar = widgets.sidebar(widgets.scopes)
+  sidebar.open()
+end, { desc = "Open debugging sidebar" })
+map("n", "<leader>lf", function()
+  vim.diagnostic.open_float { border = "rounded" }
+end, { desc = "Floating diagnostic" })
+map("n", "<leader>rcu", function()
+  require("crates").upgrade_all_crates()
+end, { desc = "Update all crates" })
 
--- more keybinds!
+map("v", ">", ">gv", { desc = "indent" })
 
-return M
+map("i", "jk", "<ESC>")
