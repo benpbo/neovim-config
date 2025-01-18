@@ -1,10 +1,39 @@
 require "nvchad.mappings"
+---@type MappingsTable
+local M = {}
 
--- add yours here
+M.general = {
+  n = {
+    [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<leader>db"] = {
+      "<cmd> DapToggleBreakpoint <CR>",
+      "Toggle breakpoint",
+    },
+    ["<leader>dus"] = {
+      function ()
+        local widgets = require('dap.ui.widgets');
+        local sidebar = widgets.sidebar(widgets.scopes);
+        sidebar.open();
+      end,
+      "Open debugging sidebar",
+    },
+  },
+  v = {
+    [">"] = { ">gv", "indent"},
+  },
+}
 
-local map = vim.keymap.set
+M.crates = {
+  n = {
+    ['<leader>rcu'] = {
+      function ()
+        require('crates').upgrade_all_crates()
+      end,
+      'Update all crates',
+    }
+  }
+}
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
+-- more keybinds!
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+return M
