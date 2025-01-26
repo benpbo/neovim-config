@@ -17,5 +17,3 @@ map("n", "<leader>rcu", function()
 end, { desc = "Update all crates" })
 
 map("v", ">", ">gv", { desc = "indent" })
-
-map("i", "jk", "<ESC>")
