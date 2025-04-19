@@ -15,9 +15,8 @@ end, { desc = "Floating diagnostic" })
 map("n", "<leader>rcu", function()
   require("crates").upgrade_all_crates()
 end, { desc = "Update all crates" })
-
-map("v", ">", ">gv", { desc = "indent" })
-
 map("n", "<Leader>nf", function()
   require("neogen").generate()
 end, { desc = "Generate annotation" })
+
+map("v", ">", ">gv", { desc = "indent" })
