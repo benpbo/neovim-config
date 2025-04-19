@@ -18,5 +18,8 @@ end, { desc = "Update all crates" })
 map("n", "<Leader>nf", function()
   require("neogen").generate()
 end, { desc = "Generate annotation" })
+map("n", "<leader>ca", function()
+  vim.lsp.buf.code_action()
+end, { desc = "Code actions" })
 
 map("v", ">", ">gv", { desc = "indent" })
