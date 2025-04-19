@@ -17,3 +17,7 @@ map("n", "<leader>rcu", function()
 end, { desc = "Update all crates" })
 
 map("v", ">", ">gv", { desc = "indent" })
+
+map("n", "<Leader>nf", function()
+  require("neogen").generate()
+end, { desc = "Generate annotation" })

@@ -113,6 +113,24 @@ local plugins = {
     config = true,
     event = "BufEnter",
   },
+
+  {
+    "danymat/neogen",
+    config = true,
+    version = "*",
+    config = function()
+      require("neogen").setup {
+        enabled = true,
+        languages = {
+          cs = {
+            template = {
+              annotation_convention = "xmldoc",
+            },
+          },
+        },
+      }
+    end,
+  },
 }
 
 return plugins
