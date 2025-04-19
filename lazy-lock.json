@@ -32,7 +32,7 @@
   "rust.vim": { "branch": "master", "commit": "889b9a7515db477f4cb6808bef1769e53493c578" },
   "scamp.nvim": { "branch": "main", "commit": "226fa87bc70d42f0384bd05ca0fa9a81c2b412b2" },
   "telescope.nvim": { "branch": "master", "commit": "a4ed82509cecc56df1c7138920a1aeaf246c0ac5" },
-  "ui": { "branch": "v3.0", "commit": "a9985d803e5de7519d337f93b999184d32adb89c" },
+  "ui": { "branch": "v3.0", "commit": "64388d25813e8f9a74e6813126a1e19b834d0295" },
   "volt": { "branch": "main", "commit": "c45d5f48da8e802e608b5c6da471ca4d84276dfb" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" }
 }

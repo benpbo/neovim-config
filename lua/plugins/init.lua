@@ -4,16 +4,8 @@ local overrides = require "configs.overrides"
 local plugins = {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre",
     opts = require "configs.conform",
-  },
-
-  -- These are some examples, uncomment them if you want to see them work!
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
   },
 
   {
@@ -92,14 +84,6 @@ local plugins = {
     event = "InsertEnter",
     config = function()
       require("better_escape").setup()
-    end,
-  },
-
-  {
-    "stevearc/conform.nvim",
-    event = "BufWritePre",
-    config = function()
-      require "configs.conform"
     end,
   },
 
