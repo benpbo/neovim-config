@@ -115,6 +115,11 @@ local plugins = {
       }
     end,
   },
+
+  {
+    "github/copilot.vim",
+    event = "BufEnter",
+  }
 }
 
 return plugins
