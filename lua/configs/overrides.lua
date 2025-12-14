@@ -58,6 +58,9 @@ M.mason = {
 
     -- C#
     "csharp-language-server",
+
+    -- Go
+    "gopls",
   },
 }
 
