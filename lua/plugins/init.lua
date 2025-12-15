@@ -98,6 +98,7 @@ local plugins = {
     "lukoshkin/highlight-whitespace",
     config = true,
     event = "BufEnter",
+    enabled = false,
   },
 
   {
