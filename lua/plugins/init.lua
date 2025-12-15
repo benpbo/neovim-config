@@ -103,7 +103,6 @@ local plugins = {
 
   {
     "danymat/neogen",
-    config = true,
     version = "*",
     config = function()
       require("neogen").setup {
