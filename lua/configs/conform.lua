@@ -2,23 +2,20 @@ return {
   lsp_fallback = true,
 
   formatters_by_ft = {
-    lua = { "stylua" },
-
-    javascript = { "prettier" },
-    typescript = { "prettier" },
     css = { "prettier" },
+    go = { "gofmt" },
+    terraform = { "tofu_fmt" },
     html = { "prettier" },
-    svelte = { "prettier" },
-
+    javascript = { "prettier" },
+    lua = { "stylua" },
     proto = { "buf" },
-
     python = {
       "ruff_fix",
       "ruff_format",
       "ruff_organize_imports",
     },
-
-    go = { "gofmt" },
+    svelte = { "prettier" },
+    typescript = { "prettier" },
   },
 
   format_on_save = {
