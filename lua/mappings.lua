@@ -21,9 +21,9 @@ end, { desc = "Generate annotation" })
 map("n", "<leader>ca", function()
   vim.lsp.buf.code_action()
 end, { desc = "Code actions" })
-map('i', '<C-p>', 'copilot#Accept("\\<CR>")', {
+map("i", "<C-J>", 'copilot#Accept("\\<CR>")', {
   expr = true,
-  replace_keycodes = false
+  replace_keycodes = false,
 })
 vim.g.copilot_no_tab_map = true
 
